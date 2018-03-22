@@ -20,7 +20,7 @@ else
 	COMMAND=$2
 fi
 
-set -e
+set -ex
 
 # Create mount dir
 mkdir -p $MOUNT_DIR

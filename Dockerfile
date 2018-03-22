@@ -12,7 +12,10 @@ RUN apt-get install -y --allow-unauthenticated \
     qemu-user-static \ 
     binfmt-support \
     parted \
-    vim
+    vim \
+    emacs \
+    python-pip \
+    python-pip-whl
 
 # Clean up after apt
 RUN apt-get clean
@@ -24,4 +27,4 @@ WORKDIR /usr/rpi
 
 COPY scripts/* /usr/rpi/
 
-
+ADD mxnet-1.0.0-py2.py3-none-any.whl /usr/rpi/mxnet-1.0.0-py2.py3-none-any.whl
